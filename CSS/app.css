@@ -8,24 +8,43 @@ html{
     box-sizing: inherit;
 }
 
+/* Globales */
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/** Header y Navegacion **/
+
 .nombre-sitio{
     margin-top: 50px;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .nombre-sitio span{
     color: #037bc0;
 }
 
-.sobre-nosotros{
-    background-color: red;
-    width: 200PX;
-    padding: 25px;
-    box-sizing: border-box; 
-}   
+.nav-principal{
+    /*border-color: #e1e1e1;
+    border-top-style: solid;
+    border-width: 1px;*/
 
-.sobre-empresa{
-    background-color: blue;
-    width: 500px;
-    padding: 100px;
+    border-top: 1px solid #e1e1e1; /* forma corta */
+    margin: 50px 0px 30px 20px; /*sentido de las manecillas del reloj*/
 }
+
+/*** display in line y block ***/
+/*inline:   no se puede colocar width ni height
+            ademas de que se muestran uno al lado 
+            del otro y solo toman el espacio necesario
+*/
+
+/*inline block: se puede poner width y height, y los elementos
+                se acomodan uno al lado del otro
+*/
+
+/*block:    se puede poner width y height, y los elementos
+            se acomodan uno abajo del otro.
+*/
