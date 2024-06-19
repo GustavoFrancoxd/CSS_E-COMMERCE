@@ -1,7 +1,6 @@
 
 html{
-    box-sizing: border-box;/*esta propiedad hace que se ajuste todo a las medidas*/
-    /*box-sizing: content-box;*/ /* esta propiedad es po defecto*/
+    box-sizing: border-box;
 }
 
 *, *:before, *:after{
@@ -16,6 +15,11 @@ a{
 
 /** Header y Navegacion **/
 
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .nombre-sitio{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -26,25 +30,27 @@ a{
     color: #037bc0;
 }
 
-.nav-principal{
-    /*border-color: #e1e1e1;
-    border-top-style: solid;
-    border-width: 1px;*/
-
-    border-top: 1px solid #e1e1e1; /* forma corta */
-    margin: 50px 0px 30px 20px; /*sentido de las manecillas del reloj*/
+.contenedor-navegacion{
+    border-top: 1px solid #e1e1e1;
 }
 
-/*** display in line y block ***/
-/*inline:   no se puede colocar width ni height
-            ademas de que se muestran uno al lado 
-            del otro y solo toman el espacio necesario
-*/
+.nav-principal{
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-/*inline block: se puede poner width y height, y los elementos
-                se acomodan uno al lado del otro
-*/
+.hero{
+    background-image: url(../img/principal.jpg);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
 
-/*block:    se puede poner width y height, y los elementos
-            se acomodan uno abajo del otro.
-*/
+.listado-categorias{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
