@@ -1,28 +1,70 @@
 
+/* Globales */
 html{
-    box-sizing: border-box;
+    box-sizing: border-box; /*esta opcion permite que atributos como padding o margin no afecten los tamaños*/
+    font-size: 62.5%; /* por defecto font-size es igual a 16px, esto se hace para para lograr una proporcion de  1rem = 10px*/
 }
 
-*, *:before, *:after{
+*, *:before, *:after{   /* esto va junto con el box-sizing:border-box */
     box-sizing: inherit;
 }
 
-/* Globales */
-a{
-    text-decoration: none;
-    color: black;
+body{
+    /*google fonts*/
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+
+    font-size: 1.6rem; /* asignar 16px a todo el documento */
+    line-height: 2; /* interlineado */
 }
 
-/** Header y Navegacion **/
+h1,h2,h3{
+    /*google fonts*/
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+    margin: 0 0 5rem 0;     /* quitar margenes por defecto de los headings */
+}
+h1{
+    font-size: 5rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+a{  /* cambiar decoraciones de los enlaces */
+    text-decoration: none;  
+    color: #000;
+}
 
 .contenedor{
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 120rem;
+    margin: 0rem auto;
+}
+
+img{
+    display: block;
+    max-width: 100%;    /*incluir para evitar desbordamientos al colocar en el css grid*/
+}
+
+/****** Header y Navegacion *******/
+
+header{
+    font-size: 10rem;
 }
 
 .nombre-sitio{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5rem;
     text-align: center;
 }
 
@@ -31,26 +73,47 @@ a{
 }
 
 .contenedor-navegacion{
-    border-top: 1px solid #e1e1e1;
+    border-top: 0.1rem solid #e1e1e1;
 }
 
 .nav-principal{
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 2rem 0rem;
+    display: flex; /* flex-box */
+    flex-direction: row; /* valor por defecto */
+    justify-content: space-between; /* espaciado entre cada elemento */
 }
 
 .hero{
-    background-image: url(../img/principal.jpg);
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 550px;
+    background-image: url(../img/principal.jpg); /* Imagen de fondo */
+    background-repeat: no-repeat; /* evita que se repita la imagen*/
+    background-size: cover; /* estira la imagen hasta la orilla */
+    background-position: center center; /* centrar en el centro de la imagen*/
+    height: 55rem;  /*altura de la imagen*/
 }
 
 .listado-categorias{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    display: grid; /* css grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de una fraccion cada una*/
+    gap: 2rem; /* separacion entre columnas */
+}
+
+.categorias{
+    padding-top: 5rem;
+}
+
+.categoria a{
+    display: block; /* por defecto inline, block permite acomodarlos uno abajo de otro y usar todo el espacio disponible.*/
+    text-align: center; /* centrar el texto */
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categoria a:hover{
+    background-color: #037bc0;
+    border-bottom-right-radius: 1rem;   /* bordes circulares*/
+    color: #e1e1e1;
+}
+
+.categorias h2{
+    text-align: center;
 }
