@@ -178,10 +178,19 @@ header{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
+    
 }
 
 .producto:nth-child(1){
     grid-column:1/7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img{
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
 }
 
 .producto:nth-child(2){
@@ -225,8 +234,6 @@ header{
     font-size: 2.8rem;
     font-weight: 900;
 } 
-
-
 
 .producto img{
     transition: transform .3s ease-out;
