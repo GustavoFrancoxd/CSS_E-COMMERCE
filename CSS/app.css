@@ -69,10 +69,12 @@ img{
     padding:1rem;
     transition: background-color .3s ease-out; /*crea una transicion*/
     text-align: center;
+    border: none;
 }
 
 .btn:hover{
     background-color: #769c02;
+    cursor: pointer;
 }
 
 .text-center{
@@ -390,3 +392,45 @@ header{
     width: 40rem;
     object-fit: cover; /* agranda y acomo*/
 }
+
+/** Formulario **/ 
+
+.formulario{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.formulario fieldset{
+    border-color: #000;
+    border-width: 1px solid #000;
+    margin-bottom: 2rem;
+}
+
+.formulario legend{
+    background-color: #005485;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label{
+    flex-basis: 10rem; /* hace que el label tome una medida de 10 rem*/
+}
+
+.campo input:not([type="radio"]), 
+.campo textarea,
+.campo select{
+    flex:1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
