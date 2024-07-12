@@ -57,24 +57,30 @@ img{
     max-width: 100%;    /*incluir para evitar desbordamientos al colocar en el css grid*/
 }
 
+
+/** utilidades **/
+
 .btn{
     background-color: #9cbc00;
     display: block; /* los elementos pueden tomar todo el ancho disponible */
     color: #ffffff;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 900; /*grosor de la fuente*/
     padding:1rem;
     transition: background-color .3s ease-out; /*crea una transicion*/
+    text-align: center;
 }
 
 .btn:hover{
     background-color: #769c02;
 }
 
-/** utilidades **/
-
 .text-center{
     text-align: center;
+}
+
+.max-width30{
+    max-width: 30rem;
 }
 
 /****** Header y Navegacion *******/
@@ -345,4 +351,42 @@ header{
     border-bottom: 2px solid #e1e1e1;
     padding-bottom: 4rem;
     margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+    border: none;
+}
+
+.entrada-meta{
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-meta p{
+    font-weight: bold;
+}
+
+.entrada-meta span{
+    color: #037bc0;
+}
+
+.contenido-entrada-blog{
+    width: 60rem;
+    margin: 0 auto;
+}
+
+/** Galeria **/
+.galeria{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.galeria img{
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover; /* agranda y acomo*/
 }
